@@ -1,0 +1,47 @@
+*{
+    font-family:"Roboto", "Montserat","Calibre";
+    font-weight:550;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+    size: 20vh;
+}
+body{
+    background-color: white;
+}
+main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+h1{
+
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: grey;
+}
+#buynow{
+    background-color: red;
+    border-radius: 10px;
+    width: 80%;
+    height: 20%;
+    margin-top: 20%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 400%;
+}
+h2{
+    font-size: 300%;
+}

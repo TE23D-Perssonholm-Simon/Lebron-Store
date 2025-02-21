@@ -1,3 +1,15 @@
+*{
+    font-family:"Roboto", "Montserat","Calibre";
+    font-weight:550;
+}
+h2{
+    font-size: 200%;
+    font-weight: lighter;
+}
+p{
+    font-size: 150%;
+    font-weight: lighter;
+}
 body{
     background-color: white;
     margin: 0px;
@@ -14,11 +26,12 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 header h1{
     color: #E2FD13;
     font-size: 500%;
-    -webkit-text-stroke: 3px #442892;
+    -webkit-text-stroke: 5px #442892;
 }
 main{
     padding: 2%;
@@ -26,6 +39,17 @@ main{
     grid-template-columns: repeat(3,1fr);
     gap: 10%;
     background-color: #FFDC3B;
+    height: 200vh;
+}
+nav{
+    background-color: #C7C7C7;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    height: 15vh;
 }
 article{
     background-color: #C7C7C7;
@@ -34,4 +58,24 @@ article{
     flex-direction: column;
     align-items: center;
     padding: 20px
+}
+.red{
+    color: red;
+    font-weight: bold;
+}
+footer{
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C7C7C7 ;
+    margin: 0px;
+    padding: 1%
+}
+.cart-icon {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 5%; /* Adjust as needed */
+    height: auto;
 }
