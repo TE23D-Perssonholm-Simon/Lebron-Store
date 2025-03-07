@@ -18,10 +18,10 @@ header{
     background-image: url(img/Lebron.png);
     background-repeat: no-repeat;
     background-position: 50%;
-    background-size: 40%;
+    background-size: 60% 100%;
     background-color: #E9EAE5;
     height: 50vh;
-    width: 100vw;
+    width: 100%;
     margin: 0px;
     display: flex;
     align-items: center;
@@ -32,14 +32,16 @@ header h1{
     color: #E2FD13;
     font-size: 500%;
     -webkit-text-stroke: 5px #442892;
+    text-align: center;
 }
 main{
-    padding: 2%;
+    padding: 5%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
     gap: 10%;
     background-color: #FFDC3B;
-    height: 200vh;
+    height: 150vh;
 }
 nav{
     background-color: #C7C7C7;
@@ -52,12 +54,21 @@ nav{
     height: 15vh;
 }
 article{
+    box-sizing: border-box;
     background-color: #C7C7C7;
     margin: 1%;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 20px
+    padding: 5%;
+    max-height: 95%;
+}
+article img{
+    box-sizing: border-box;
+    max-height: 60%;
+    max-width: 80%;
+    width: auto;
 }
 .red{
     color: red;
@@ -78,4 +89,43 @@ footer{
     right: 5%;
     width: 5%; /* Adjust as needed */
     height: auto;
+}
+.displayrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.cart-button{
+    height: fit-content;
+    padding: 3%;
+}
+@media screen and (min-width: 641px) and (max-width: 1007px){
+    header{
+        height: 32vh;
+    }
+    nav{
+        height: 10vh;
+    }
+    main{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        height: 120vh;
+        gap: 3%;
+    }
+}
+@media screen and (max-width:640px) {
+    header{
+        height: 30vh;
+    }
+    .cart-icon{
+        width: 10%;
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,1fr);
+        height: 400vh;
+        gap: 2%
+    }
 }
