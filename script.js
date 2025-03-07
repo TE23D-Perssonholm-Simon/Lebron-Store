@@ -1,3 +1,4 @@
+
 let main = document.querySelector("main")
 class item{
     constructor(img,price,name){
@@ -33,6 +34,7 @@ class item{
         this.nrbought++;
     }
 }
+
 let items = []
 items.push(new item("img/LebronBall.png",30,"Lebron BasketBall"));
 items.push(new item("img/LebronPillow.png",20,"Lebron Pillow"))
@@ -43,4 +45,8 @@ items.push(new item("img/LebronShirt.png",25,"Lebron Shirt"))
 for(let i = 0; i< items.length;i++){
     items[i].createitem(main);
 }
+function gotocart(){
+    localStorage.setItem("Items",JSON.stringify(items))
+}
 let cart = document.querySelector("#cart-button");
+cart.onclick = gotocart
