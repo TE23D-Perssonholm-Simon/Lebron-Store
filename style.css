@@ -123,13 +123,16 @@ footer{
 }
 .nr-bought{
     position: absolute;
-    top: 1%;
-    right: 1%;
+    top: -4%;
+    right: -4%;
     background-color: red;
     border-radius: 50%;
     height: 10%;
     aspect-ratio: 1/1;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 

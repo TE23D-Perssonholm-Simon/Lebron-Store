@@ -34,9 +34,11 @@ class item{
     additem(){
         this.nrbought++;
         if(this.nrbought == 1){
+            let nrboughtpopup = document.createElement("div")
+            nrboughtpopup.classList.add("nr-bought")
+            this.div.appendChild(nrboughtpopup)
             this.nrboughtbutton = document.createElement("p")
-            this.nrboughtbutton.classList.add("nr-bought")
-            this.div.appendChild(this.nrboughtbutton)
+            nrboughtpopup.appendChild(this.nrboughtbutton)
         }
         this.nrboughtbutton.textContent = this.nrbought.toString()
     }
