@@ -55,6 +55,7 @@ nav{
     height: 15vh;
 }
 article{
+    position: relative;
     box-sizing: border-box;
     background-color: #C7C7C7;
     margin: 1%;
@@ -120,7 +121,17 @@ footer{
     transform: scale(0.95);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
+.nr-bought{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    background-color: red;
+    border-radius: 50%;
+    height: 10%;
+    aspect-ratio: 1/1;
+    text-align: center;
+    
+}
 
 @media screen and (min-width: 641px) and (max-width: 1007px){
     header{

@@ -28,10 +28,17 @@ class item{
         button.onclick = () => this.additem()
         textdiv.appendChild(button)
         div.appendChild(textdiv)
+        this.div = div
         main.appendChild(div)
     }
     additem(){
         this.nrbought++;
+        if(this.nrbought == 1){
+            this.nrboughtbutton = document.createElement("p")
+            this.nrboughtbutton.classList.add("nr-bought")
+            this.div.appendChild(this.nrboughtbutton)
+        }
+        this.nrboughtbutton.textContent = this.nrbought.toString()
     }
 }
 
