@@ -16,16 +16,28 @@ body{
 main{
     display: grid;
     grid-template-columns: 2fr 1fr;
+    gap: 5%;
+    width: 100%;
 }
 h1{
 
 }
-
+p{
+    font-size: larger;
+}
 .item{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: grey;
+    background-color:   lightgrey;
+    padding: 2%;
+    border-radius: 20px;
+}
+.item img{
+    height: 20vh;
+}
+#itemslist div{
+    margin-bottom: 2%;
 }
 #buynow{
     background-color: red;
@@ -33,7 +45,8 @@ h1{
     width: 80%;
     height: 20%;
     margin-top: 20%;
-    padding: 5%;
+    padding: 2%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,4 +57,15 @@ h1{
 }
 h2{
     font-size: 300%;
+}
+@media screen and (max-width:640px) {
+    main{
+        grid-template-columns: 1fr;
+    }
+    .item img{
+        display: none;
+    }
+    p{
+        font-size: larger;
+    }
 }

@@ -1,5 +1,5 @@
 *{
-    font-family:"Roboto", "Montserat","Calibre";
+    font-family:"Comic Neue","Roboto", "Montserrat";
     font-weight:550;
 }
 h2{
@@ -18,7 +18,7 @@ header{
     background-image: url(img/Lebron.png);
     background-repeat: no-repeat;
     background-position: 50%;
-    background-size: 60% 100%;
+    background-size: 50%;
     background-color: #E9EAE5;
     height: 50vh;
     width: 100%;
@@ -35,6 +35,7 @@ header h1{
     text-align: center;
 }
 main{
+    height: fit-content;
     padding: 5%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -89,6 +90,8 @@ footer{
     right: 5%;
     width: 5%; /* Adjust as needed */
     height: auto;
+    background-color: #E9EAE5;
+    border-style: none;
 }
 .displayrow{
     display: flex;
@@ -97,16 +100,24 @@ footer{
     align-items: center;
     width: 100%;
 }
-.cart-button{
+.cart-img{
+    height: 100%;
+    width: 100%;
+}
+.add-to-cart-button{
     height: fit-content;
     padding: 3%;
 }
 @media screen and (min-width: 641px) and (max-width: 1007px){
     header{
         height: 32vh;
+        background-size: 110% auto;
     }
     nav{
         height: 10vh;
+    }
+    .cart-icon{
+        width: 10%;
     }
     main{
         grid-template-columns: repeat(2,1fr);
@@ -118,6 +129,7 @@ footer{
 @media screen and (max-width:640px) {
     header{
         height: 30vh;
+        background-size: 110% auto;
     }
     .cart-icon{
         width: 10%;

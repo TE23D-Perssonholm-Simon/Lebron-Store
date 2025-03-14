@@ -24,7 +24,7 @@ class item{
         textdiv.appendChild(price)
         let button = document.createElement("button")
         button.textContent = "add to cart"
-        button.classList.add("cart-button")
+        button.classList.add("add-to-cart-button")
         button.onclick = () => this.additem()
         textdiv.appendChild(button)
         div.appendChild(textdiv)
@@ -47,6 +47,7 @@ for(let i = 0; i< items.length;i++){
 }
 function gotocart(){
     localStorage.setItem("Items",JSON.stringify(items))
+    window.location.href ="shoppingcart.html"
 }
-let cart = document.querySelector("#cart-button");
+let cart = document.querySelector(".cart-icon");
 cart.onclick = gotocart
