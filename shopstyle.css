@@ -51,6 +51,14 @@ p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+#buynow:hover{
+    cursor:pointer;
+    transform: scale(1.1);
+}
+#buynow:active{
+    transform: scale(0.9);
 }
 h1{
     font-size: 400%;

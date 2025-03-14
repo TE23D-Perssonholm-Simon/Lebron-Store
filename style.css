@@ -94,6 +94,11 @@ footer{
     height: auto;
     background-color: #E9EAE5;
     border-style: none;
+    transition: all 0.2s ease-in-out;
+}
+.cart-icon:hover{
+    transform: scale(1.1);
+    cursor:pointer
 }
 .displayrow{
     display: flex;
