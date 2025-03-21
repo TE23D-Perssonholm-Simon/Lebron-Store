@@ -45,12 +45,12 @@ class item{
 }
 
 let items = []
-items.push(new item("img/LebronBall.png",30,"Lebron BasketBall"));
-items.push(new item("img/LebronPillow.png",20,"Lebron Pillow"))
-items.push(new item("img/LebronPlushie.png",50,"Lebron Plushie"))
-items.push(new item("img/LebronPoster.png",40,"Lebron Poster"))
-items.push(new item("img/LebronSheet.png",64,"Lebron BedSheet"))
-items.push(new item("img/LebronShirt.png",25,"Lebron Shirt"))
+items.push(new item("img/LebronBall.webp",30,"Lebron BasketBall"));
+items.push(new item("img/LebronPillow.webp",20,"Lebron Pillow"))
+items.push(new item("img/LebronPlushie.webp",50,"Lebron Plushie"))
+items.push(new item("img/LebronPoster.webp",40,"Lebron Poster"))
+items.push(new item("img/LebronSheet.webp",64,"Lebron BedSheet"))
+items.push(new item("img/LebronShirt.webp",25,"Lebron Shirt"))
 for(let i = 0; i< items.length;i++){
     items[i].createitem(main);
 }
