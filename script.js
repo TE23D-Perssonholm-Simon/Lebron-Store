@@ -36,8 +36,9 @@ class item{
             this.div.appendChild(nrboughtpopup)
             this.nrboughtbutton = document.createElement("p")
             nrboughtpopup.appendChild(this.nrboughtbutton)
+            this.nrboughtbutton.textContent = this.nrbought.toString()
         }
-        this.nrboughtbutton.textContent = this.nrbought.toString()
+        
     }
     additem(){
         this.nrbought++;
@@ -52,8 +53,19 @@ class item{
         localStorage.setItem("Items",JSON.stringify(items))
     }
 }
-
-let items = JSON.parse(localStorage.getItem("Items")).map(obj => new item(obj.img,obj.price,obj.name,obj.nrbought)) || [new item("img/LebronBall.webp",30,"Lebron BasketBall"),new item("img/LebronPlushie.webp",50,"Lebron Plushie"),new item("img/LebronPoster.webp",40,"Lebron Poster"),new item("img/LebronSheet.webp",64,"Lebron BedSheet"),new item("img/LebronShirt.webp",25,"Lebron Shirt")]
+let storeddata = JSON.parse(localStorage.getItem("Items"));
+let items = []
+if(!storeddata){
+    items = [new item("img/LebronBall.webp", 30, "Lebron BasketBall"), 
+        new item("img/LebronPlushie.webp", 50, "Lebron Plushie"), 
+        new item("img/LebronPoster.webp", 40, "Lebron Poster"), 
+        new item("img/LebronSheet.webp", 64, "Lebron BedSheet"), 
+        new item("img/LebronShirt.webp", 25, "Lebron Shirt"),
+        new item("img/LebronPillow.webp",20,"Lebron Pillow")]
+}
+else{
+    items = storeddata.map(obj => new item(obj.img, obj.price, obj.name, obj.nrbought))
+}
 for(let i = 0; i< items.length;i++){
     items[i].createitem(main);
 }

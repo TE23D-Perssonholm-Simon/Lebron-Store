@@ -29,12 +29,18 @@ class item{
         ol.appendChild(div)
     }
 }
+function clear(){
+    localStorage.removeItem("Items");
+    window.location.href ="shoppingcart.html"
+}
 let ol = document.querySelector("#itemslist");
 let main = document.querySelector("main")
 let price = document.querySelector("#price");
 let storeddata = JSON.parse(localStorage.getItem("Items")) || []
-let items = storeddata.map(obj => new item(obj.img,obj.price,obj.name,obj.nrbought));
+let items = storeddata.map(obj => new item(obj.img,obj.price,obj.name,obj.nrbought)) || [];
 let totalcost = 0;
+let buynowbutton = document.querySelector("#buynow");
+buynowbutton.onclick = clear;
 for(let i = 0; i< items.length;i++){
     items[i].display(ol);
     totalcost += items[i].price;
