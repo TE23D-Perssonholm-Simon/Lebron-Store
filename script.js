@@ -1,11 +1,11 @@
 
 let main = document.querySelector("main")
 class item{
-    constructor(img,price,name){
+    constructor(img,price,name,nrbought = 0){
         this.img = img;
         this.price = price;
         this.name = name;
-        this.nrbought = 0;
+        this.nrbought = nrbought;
     }
     createitem(main){
         let div = document.createElement("article")
@@ -30,6 +30,14 @@ class item{
         div.appendChild(textdiv)
         this.div = div
         main.appendChild(div)
+        if(this.nrbought != 0){
+            let nrboughtpopup = document.createElement("div")
+            nrboughtpopup.classList.add("nr-bought")
+            this.div.appendChild(nrboughtpopup)
+            this.nrboughtbutton = document.createElement("p")
+            nrboughtpopup.appendChild(this.nrboughtbutton)
+        }
+        this.nrboughtbutton.textContent = this.nrbought.toString()
     }
     additem(){
         this.nrbought++;
@@ -41,16 +49,11 @@ class item{
             nrboughtpopup.appendChild(this.nrboughtbutton)
         }
         this.nrboughtbutton.textContent = this.nrbought.toString()
+        localStorage.setItem("Items",JSON.stringify(items))
     }
 }
 
-let items = []
-items.push(new item("img/LebronBall.webp",30,"Lebron BasketBall"));
-items.push(new item("img/LebronPillow.webp",20,"Lebron Pillow"))
-items.push(new item("img/LebronPlushie.webp",50,"Lebron Plushie"))
-items.push(new item("img/LebronPoster.webp",40,"Lebron Poster"))
-items.push(new item("img/LebronSheet.webp",64,"Lebron BedSheet"))
-items.push(new item("img/LebronShirt.webp",25,"Lebron Shirt"))
+let items = JSON.parse(localStorage.getItem("Items")).map(obj => new item(obj.img,obj.price,obj.name,obj.nrbought)) || [new item("img/LebronBall.webp",30,"Lebron BasketBall"),new item("img/LebronPlushie.webp",50,"Lebron Plushie"),new item("img/LebronPoster.webp",40,"Lebron Poster"),new item("img/LebronSheet.webp",64,"Lebron BedSheet"),new item("img/LebronShirt.webp",25,"Lebron Shirt")]
 for(let i = 0; i< items.length;i++){
     items[i].createitem(main);
 }
