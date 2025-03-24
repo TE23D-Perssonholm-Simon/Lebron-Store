@@ -55,7 +55,7 @@ class item{
 }
 let storeddata = JSON.parse(localStorage.getItem("Items"));
 let items = []
-if(!storeddata){
+if(!storeddata || storeddata.length !== 6){
     items = [new item("img/LebronBall.webp", 30, "Lebron BasketBall"), 
         new item("img/LebronPlushie.webp", 50, "Lebron Plushie"), 
         new item("img/LebronPoster.webp", 40, "Lebron Poster"), 
